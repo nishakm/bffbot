@@ -1,0 +1,18 @@
+#!/usr/bin/env python
+
+import hello
+
+
+def respond(hello):
+    they_said = raw_input()
+    if they_said in hello.hellos:
+        hello.say_it()
+    else:
+        print 'eh?'
+    respond(hello)
+
+
+if __name__ == '__main__':
+    h = hello.Hello()
+    h.greet()
+    respond(h)
